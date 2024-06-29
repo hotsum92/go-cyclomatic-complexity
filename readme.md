@@ -76,7 +76,7 @@ go run ast-walker
 git diff --stat :/first HEAD
 git log --stat :/first HEAD
 git rebase --exec 'cat $(git ls-files) | wc -l' :/first
-git rebase --exec "$(cat ./stat.sh | tr '\n' ';')" :/first
+git rebase --exec ../stat.sh :/first 2>/dev/null
 ```
 
 
