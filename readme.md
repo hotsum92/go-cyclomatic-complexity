@@ -1,5 +1,7 @@
 # go-cyclomatic-complexity
 
+wc -l $(git ls-files) | sort -n
+
 ## cyclomatic complexity
 
 M = E − N + 2P
@@ -24,6 +26,9 @@ go install github.com/fzipp/gocyclo/cmd/gocyclo@latest
 ```bash
 gocyclo .
 gocyclo main.go
+gocyclo -top N .
+gocyclo -over N .
+gocyclo -avg -top 10 .
 ```
 
 ### output
@@ -35,6 +40,8 @@ gocyclo main.go
 ```
 
 ## bugspots
+
+[グーグルのバグ予測アルゴリズム](https://qiita.com/okappy/items/e5fc62f9026e0d73c3e9)
 
 [bugspots-go](https://github.com/masmgr/bugspots-go)
 
