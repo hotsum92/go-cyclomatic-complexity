@@ -2,6 +2,16 @@
 
 wc -l $(git ls-files) | sort -n
 
+## cogninitive complexity
+
+[cognitive complexities](https://github.com/uudashr/gocognit)
+
+### install
+
+```bash
+go install github.com/uudashr/gocognit/cmd/gocognit@latest
+```
+
 ## cyclomatic complexity
 
 M = E − N + 2P
